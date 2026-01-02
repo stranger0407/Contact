@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    
+    <!-- App Colors (Dark Theme) -->
+    <color name="primary_color">#64B5F6</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_light">#BBDEFB</color>
+    <color name="accent_color">#FF7043</color>
+    
+    <!-- Background Colors -->
+    <color name="background_color">#121212</color>
+    <color name="card_background">#1E1E1E</color>
+    <color name="dialog_background">#2D2D2D</color>
+    
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    
+    <!-- Avatar Colors -->
+    <color name="avatar_background">#1E3A5F</color>
+    
+    <!-- Input Colors -->
+    <color name="input_background">#2D2D2D</color>
+    <color name="input_stroke">#424242</color>
+    <color name="input_stroke_focused">#64B5F6</color>
+    
+    <!-- Status Colors -->
+    <color name="success_color">#81C784</color>
+    <color name="error_color">#EF5350</color>
+    <color name="warning_color">#FFD54F</color>
+</resources>

@@ -3,48 +3,114 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:cardCornerRadius="7dp"
-        app:cardUseCompatPadding="true">
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        app:cardBackgroundColor="@color/card_background"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="6dp">
+        
         <LinearLayout
+            android:id="@+id/llRow"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_vertical"
-            android:id="@+id/llRow"
-            android:padding="11dp">
-            <ImageView
-                android:layout_width="70dp"
-                android:layout_height="70dp"
-                android:background="#E2ED6F"
-                android:id="@+id/imgContact"
-                android:contentDescription="Contact Image"
-                android:src="@drawable/profile" />
-           <LinearLayout
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:layout_marginStart="11dp"
-               android:layout_marginLeft="11dp"
-               android:orientation="vertical">
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/txtName"
-               android:text=" Conatct Name"
-               android:textSize="18sp"
-               android:textStyle="bold"/>
+            android:padding="16dp"
+            android:background="?attr/selectableItemBackground">
 
-           <TextView
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content"
-               android:id="@+id/txtNumber"
-               android:text=" Contact Number"
-               android:textSize="18sp"
-               android:textStyle="bold"/>
+            <!-- Contact Avatar -->
+            <FrameLayout
+                android:layout_width="56dp"
+                android:layout_height="56dp">
+                
+                <androidx.cardview.widget.CardView
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    app:cardCornerRadius="28dp"
+                    app:cardElevation="2dp">
+                    
+                    <ImageView
+                        android:id="@+id/imgContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/avatar_background"
+                        android:contentDescription="Contact Image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile" />
+                        
+                </androidx.cardview.widget.CardView>
+                
+                <!-- Favorite star indicator -->
+                <ImageView
+                    android:id="@+id/imgFavorite"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="bottom|end"
+                    android:background="@drawable/favorite_badge_background"
+                    android:padding="2dp"
+                    android:src="@drawable/baseline_star_24"
+                    android:visibility="gone"
+                    app:tint="@color/warning_color" />
+                    
+            </FrameLayout>
 
+            <!-- Contact Info -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
 
-           </LinearLayout>
+                <TextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Contact Name"
+                    android:textColor="@color/text_primary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/txtNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Contact Number"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="14sp" />
+
+            </LinearLayout>
+
+            <!-- Message Button -->
+            <ImageButton
+                android:id="@+id/btnMessage"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Message contact"
+                android:padding="10dp"
+                android:src="@drawable/baseline_message_24"
+                app:tint="@color/success_color" />
+
+            <!-- Call Button -->
+            <ImageButton
+                android:id="@+id/btnCall"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Call contact"
+                android:padding="10dp"
+                android:src="@drawable/baseline_call_24"
+                app:tint="@color/primary_color" />
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>

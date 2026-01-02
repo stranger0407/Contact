@@ -1,0 +1,12 @@
+{
+    "java.project.sourcePaths": [
+        "app/src/main/java"
+    ],
+    "java.project.referencedLibraries": [
+        "app/libs/**/*.jar"
+    ],
+    "files.exclude": {
+        "**/build": true,
+        "**/.gradle": true
+    }
+}
